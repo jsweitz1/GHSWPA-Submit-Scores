@@ -1,0 +1,167 @@
+/* Body and Main Flex Container */
+body {
+    background-color: #14468F;
+}
+.mainContainer {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form Structure */
+.formContainer {
+    width: 80%;
+    margin: 10px 0px;
+    max-width:750px;
+    min-height:300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 1px 1px 5px black;
+}
+.formRow {
+    background-color: #C0C0C0;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+}
+.titleRow {
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+.formSection {
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+    width:50%;
+}
+.titleSection {
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+    width:80%;
+}
+.teamName, .teamScore {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.checkboxArea {
+    width: 75%;
+    max-width:200px;
+    justify-content: space-between;
+    border:1px dotted black;
+    border-radius:5px;
+    padding:2px;
+    margin-bottom:5px;
+}
+.teamSection {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+
+/* Header Styling */
+.titleSection h2, .titlSection p {
+    color: #092042;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.titleSection h2 {
+    font-family: 'Bowlby One SC', cursive;
+    color: #092042;
+    letter-spacing:1.5px;
+    font-size: 1.4em;
+    margin-top: 5px;
+}
+.titleSection p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1em;
+}
+.headerPicture {
+    width: 250px;
+    height:auto;
+}
+
+
+/* Form Object Styling */
+.formLabelStyle {
+    font-size: 1em;
+    letter-spacing: 1px;
+    font-family: 'Bowlby One SC', cursive;
+    color: #092042;
+}
+.formDDLStyle {
+    font-family: 'Open Sans', sans-serif;
+    color: #092042;
+    width: 90%;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+.formDDLStyle:focus {
+    border-color:#14468F;
+    box-shadow: 0 0 8px 0 #14468F;
+}
+.formTextboxStyle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    color: #092042;
+    width: 90%;
+    padding: 2px 3px 2px 5px;
+    margin: 5px 2px;
+    height: 22px;
+    border: 1px solid black;
+    border-radius: 3px;
+    outline: none;
+    align-self:center;
+}
+.formTextboxStyle:focus {
+    border-color:#14468F;
+    box-shadow: 0 0 8px 0 #14468F;
+}
+
+
+
+/* Submit Button Styling */
+.submitButton {
+    font-family: 'Bowlby One SC', cursive;
+    color: white;
+    background-color: #138145;
+    font-size: 1.1em;
+    padding: 5px;
+    margin: 3px;
+    border-radius: 5px;
+}
+.submitButton:hover {
+    filter: brightness(104%);
+    outline:none;
+}
+.submitButton:active {
+    filter: brightness(108%);
+    outline:none;
+}
