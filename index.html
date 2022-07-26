@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GHSWPA Submit Scores</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a60831d130.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Do+Hyeon&family=Open+Sans&family=East+Sea+Dokdo&family=Source+Sans+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="Icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Icons/favicon-16x16.png">
+    <link rel="manifest" href="Icons/site.webmanifest">
+  </head>
+  <body  onload="myFunction()">
+    <script src="main.js"></script>
+    <div class="mainContainer">
+        <form id="scoresForm" class="formContainer" onsubmit="return sendMail(event)">
+            <div class="titleRow">
+                <div class="titleSection">
+                    <img class="headerPicture" src="Pictures/ghswpa-logo-header.jpg">
+                    <h2>Submit Scores</h2>
+                    <p>Please input your info below!</p>
+                </div>
+            </div>
+            <div class="formRow">
+                <div class="formSection">
+                    <label class="formLabelStyle" for="gameDate">Scheduled Date:</label>
+                </div>
+                <div class="formSection">
+                    <select class="formDDLStyle" id="gameMonth" name="gameMonth" required>
+                        <option value="" disabled selected>Month</option>
+                        <option value="Jan">January</option>
+                        <option value="Feb">February</option>
+                        <option value="Mar">March</option>
+                        <option value="Apr">April</option>
+                        <option value="May">May</option>
+                        <option value="Jun">June</option>
+                        <option value="Jul">July</option>
+                        <option value="Aug">August</option>
+                        <option value="Sep">September</option>
+                        <option value="Oct">October</option>
+                        <option value="Nov">November</option>
+                        <option value="Dec">December</option>
+                    </select>
+                    <select class="formDDLStyle" id="gameDay" name="gameDay" required>
+                        <option value="" disabled selected>Day</option>
+                        <option value="01">1</option>
+                        <option value="02">2</option>
+                        <option value="03">3</option>
+                        <option value="04">4</option>
+                        <option value="05">5</option>
+                        <option value="06">6</option>
+                        <option value="07">7</option>
+                        <option value="08">8</option>
+                        <option value="09">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                    <select class="formDDLStyle" id="gameYear" name="gameYear" required>
+                        <option value="" disabled selected>Year</option>
+                    </select>
+                </div>
+            </div>
+            <div class="formRow">
+                <div class="formSection">
+                    <label class="formLabelStyle" for="gameTime">Scheduled Time:</label>
+                </div>
+                <div class="formSection">
+                    <input class="formTextboxStyle" type="time" id="gameTime" name="gameTime" required>
+                </div>
+            </div>
+            <div class="formRow">
+                <div class="formSection">
+                    <label class="formLabelStyle" for="gameFacility">Location:</label>
+                </div>
+                <div class="formSection">
+                    <select class="formDDLStyle" id="gameFacility" name="gameFacility">
+                        <option value="" disabled selected>Select Facilty:</option>
+                        <option value="Cherokee AC">Cherokee AC</option>
+                        <option value="Cumming AC">Cumming AC</option>
+                        <option value="Dynamo AC">Dynamo AC</option>
+                        <option value="Mountain View AC">Mountain View AC</option>
+                        <option value="Pace AC">Pace AC</option>
+                    </select>
+                </div>
+            </div>
+            <div class="formRow">
+                <div class="formSection">
+                    <div class="teamName">
+                        <label class="formLabelStyle" for="team1Name">Team 1</label>
+                    </div>
+                    <div class="teamName">
+                        <input class="formTextboxStyle" type="text" id="team1Name" name="team1Name" Placeholder="Team 1 Name" required pattern="^[a-zA-Z\s]*$" title="Team name can only be letters or spaces.">
+                    </div>
+                    <div class="teamScore">
+                        <input class="formTextboxStyle" type="number" id="team1Score" name="team1Score" Placeholder="Team 1 Score" required>   
+                    </div>
+                    <div class="teamScore">
+                        <div class="formRow checkboxArea">
+                            <div class="formSection buttonSection">
+                                <label for="team1Forfeit">Forfeit</label>
+                                <input type="checkbox" id="team1Forfeit" name="team1Forfeit">   
+                            </div>
+                            <div class="formSection buttonSection">
+                                <label for="team1Exhib">Exhib.</label>
+                                <input type="checkbox" id="team1Exhib" name="team1Exhib">   
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="formSection">
+                    <div class="teamName">
+                        <label class="formLabelStyle" for="team2Name">Team 2</label>
+                    </div>
+                    <div class="teamName">
+                        <input class="formTextboxStyle" type="text" id="team2Name" name="team2Name" placeholder="Team 2 Name" required pattern="^[a-zA-Z\s]*$" title="Team name can only be letters or spaces.">
+                    </div>
+                    <div class="teamScore">
+                        <input class="formTextboxStyle" type="number" id="team2Score" name="team2Score" placeholder="Team 2 Score" required>   
+                    </div>
+                    <div class="teamScore">
+                        <div class="formRow checkboxArea">
+                            <div class="formSection buttonSection">
+                                <label for="team2Forfeit">Forfeit</label>
+                                <input type="checkbox" id="team2Forfeit" name="team2Forfeit">   
+                            </div>
+                            <div class="formSection buttonSection">
+                                <label for="team2Exhib">Exhib.</label>
+                                <input type="checkbox" id="team2Exhib" name="team2Exhib">   
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="formRow">
+                <div class="formSection">
+                    <label class="formLabelStyle" for="submittedBy">Submitted By:</label>
+                </div>
+                <div class="formSection">
+                    <input class="formTextboxStyle" type="text" id="submittedBy" name="submittedBy" placeholder="Name" required min-length=3 >
+                </div>
+            </div>
+            <div class="formRow">
+                <div class="formSection buttonSection">
+                    <input class="submitButton" type="submit" text="Submit">
+                </div>
+                <!--<div class="formSection buttonSection">
+                    <button>Clear</button>
+                </div>-->
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+      <script type="text/javascript">
+   (function(){
+      emailjs.init("JA4OxCMtafwhm_iLv");
+   })();
+</script>
+
+  </body>
+</html>
