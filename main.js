@@ -7,7 +7,7 @@ function myFunction() {
     opt.value = year;
     opt.text = year;
     selectElement.add(opt);  
-    console.log("MY FUNCTION CALLED")
+    console.log("If you're reading this, I hope you have a great day!")
 }
 
 function titleCase(str) {
@@ -29,6 +29,7 @@ function sendMail(e) {
     var location = document.getElementById("gameFacility").value;
     var time = document.getElementById("gameTime").value;
     var submittedBy = document.getElementById("submittedBy").value;
+    //var submittedEmail = document.getElementById("submittedEmail").value;
     
     var team1Forfeit = document.getElementById("team1Forfeit");
     var team1Exhib = document.getElementById("team1Exhib");
@@ -54,12 +55,14 @@ function sendMail(e) {
     
     var bodyMessage = "Submitted by: " + submittedBy + " <br><br> --using GAPolo's Score Submission web app--";
     
-    console.log(subjectMessage);
-    console.log(bodyMessage);
+    //console.log(subjectMessage);
+    //console.log(bodyMessage);
+    //console.log(senderEmail)
     
     var templateParams = {
         subject: subjectMessage,
         message: bodyMessage
+        //sender: submittedEmail
     };
     
     emailjs.send("service_uzc0o1t", "template_nbf66wn", templateParams)

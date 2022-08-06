@@ -165,3 +165,18 @@ body {
     filter: brightness(108%);
     outline:none;
 }
+
+
+
+/* Responsive Styling  */
+@media only screen and (max-width: 650px), only screen and (max-device-width: 650px) {
+    .formRow{
+        flex-direction:column;
+    }
+    .checkboxArea{
+        flex-direction:row;
+    }
+    .formSection {
+        width:90%;
+    }
+}

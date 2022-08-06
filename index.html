@@ -97,7 +97,7 @@
                     <label class="formLabelStyle" for="gameFacility">Location:</label>
                 </div>
                 <div class="formSection">
-                    <select class="formDDLStyle" id="gameFacility" name="gameFacility">
+                    <select class="formDDLStyle" id="gameFacility" name="gameFacility" required>
                         <option value="" disabled selected>Select Facilty:</option>
                         <option value="Cherokee AC">Cherokee AC</option>
                         <option value="Cumming AC">Cumming AC</option>
@@ -110,13 +110,13 @@
             <div class="formRow">
                 <div class="formSection">
                     <div class="teamName">
-                        <label class="formLabelStyle" for="team1Name">Team 1</label>
+                        <label class="formLabelStyle" for="team1Name">White Team</label>
                     </div>
                     <div class="teamName">
-                        <input class="formTextboxStyle" type="text" id="team1Name" name="team1Name" Placeholder="Team 1 Name" required pattern="^[a-zA-Z\s]*$" title="Team name can only be letters or spaces.">
+                        <input class="formTextboxStyle" type="text" id="team1Name" name="team1Name" Placeholder="White Team Name" required pattern="^[a-zA-Z\s]*$" title="Team name can only be letters or spaces.">
                     </div>
                     <div class="teamScore">
-                        <input class="formTextboxStyle" type="number" id="team1Score" name="team1Score" Placeholder="Team 1 Score" required>   
+                        <input class="formTextboxStyle" type="number" id="team1Score" name="team1Score" Placeholder="White Team Score" required>   
                     </div>
                     <div class="teamScore">
                         <div class="formRow checkboxArea">
@@ -135,13 +135,13 @@
                 </div>
                 <div class="formSection">
                     <div class="teamName">
-                        <label class="formLabelStyle" for="team2Name">Team 2</label>
+                        <label class="formLabelStyle" for="team2Name">Dark Team</label>
                     </div>
                     <div class="teamName">
-                        <input class="formTextboxStyle" type="text" id="team2Name" name="team2Name" placeholder="Team 2 Name" required pattern="^[a-zA-Z\s]*$" title="Team name can only be letters or spaces.">
+                        <input class="formTextboxStyle" type="text" id="team2Name" name="team2Name" placeholder="Dark Team Name" required pattern="^[a-zA-Z\s]*$" title="Team name can only be letters or spaces.">
                     </div>
                     <div class="teamScore">
-                        <input class="formTextboxStyle" type="number" id="team2Score" name="team2Score" placeholder="Team 2 Score" required>   
+                        <input class="formTextboxStyle" type="number" id="team2Score" name="team2Score" placeholder="Dark Team Score" required>   
                     </div>
                     <div class="teamScore">
                         <div class="formRow checkboxArea">
@@ -165,15 +165,13 @@
                 </div>
                 <div class="formSection">
                     <input class="formTextboxStyle" type="text" id="submittedBy" name="submittedBy" placeholder="Name" required min-length=3 >
+                    <!--<input class="formTextboxStyle" type="email" id="submittedEmail" name="submittedEmail" placeholder="Email" required> -->
                 </div>
             </div>
             <div class="formRow">
                 <div class="formSection buttonSection">
                     <input class="submitButton" type="submit" text="Submit">
                 </div>
-                <!--<div class="formSection buttonSection">
-                    <button>Clear</button>
-                </div>-->
             </div>
         </form>
     </div>
